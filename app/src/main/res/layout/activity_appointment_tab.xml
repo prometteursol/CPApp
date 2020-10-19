@@ -1,0 +1,79 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGray">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/slider"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@drawable/viewer_background_two_colors" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="160dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.prometteur.cpapp.utils.ButtonCustomFont
+                android:id="@+id/btnOngoing"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bg_small"
+                android:gravity="center"
+                android:text="Ongoing"
+                android:textColor="@color/black"
+                android:paddingTop="@dimen/_3sdp"
+                app:cornerRadius="@dimen/_10sdp" />
+
+            <com.prometteur.cpapp.utils.ButtonCustomFont
+                android:id="@+id/btnTodays"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bg_small"
+                android:gravity="center"
+                android:text="Today's"
+                android:paddingTop="@dimen/_3sdp"
+                android:textColor="@color/black"
+                app:cornerRadius="@dimen/_10sdp" />
+
+            <com.prometteur.cpapp.utils.ButtonCustomFont
+                android:id="@+id/btnUpcoming"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bg_small"
+                android:gravity="center"
+                android:text="Upcoming"
+                android:paddingTop="@dimen/_3sdp"
+                android:textColor="@color/black"
+                app:cornerRadius="@dimen/_10sdp" />
+        </LinearLayout>
+
+        <com.prometteur.cpapp.utils.NonSwipeableViewPager
+            android:id="@+id/vpAppoint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

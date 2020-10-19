@@ -1,0 +1,209 @@
+<LinearLayout android:id="@+id/listSurQue"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingEnd="10dp"
+    >
+
+    <com.prometteur.cpapp.utils.CheckBoxCustomFont
+        android:id="@+id/cbIsHairCheck"
+        style="@style/MyTexViewStyleService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
+        />
+    <com.prometteur.cpapp.utils.CheckBoxCustomFont
+        android:id="@+id/cbIsHair"
+        style="@style/MyTexViewStyleService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
+        android:text="Hair"
+        android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+        android:layout_weight="1"
+        android:button="@null"
+        android:textColor="@android:color/black"
+
+        />
+
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/linHairBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+    <com.prometteur.cpapp.utils.CustomeEditText
+        android:id="@+id/edtNoOfOptHair"
+        style="@style/MyEditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
+        android:hint="@string/no_of_operators"
+        android:paddingLeft="15dp"
+        android:textColor="@android:color/black"
+        android:inputType="number"
+        android:maxLength="2"
+        />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.prometteur.cpapp.utils.TextViewCustomFont
+        style="@style/MyTexViewStyleQue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
+        android:text="Brand Used"
+        android:paddingLeft="15dp"
+        android:textColor="@android:color/black" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <com.prometteur.cpapp.utils.CheckBoxCustomFont
+            android:id="@+id/hairBrand1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Loreal"
+
+            />
+
+        <com.prometteur.cpapp.utils.CheckBoxCustomFont
+            android:id="@+id/hairBrand2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Schwarzkopf" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <com.prometteur.cpapp.utils.CheckBoxCustomFont
+            android:id="@+id/hairBrand3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Godrej" />
+
+        <com.prometteur.cpapp.utils.CheckBoxCustomFont
+            android:id="@+id/hairBrand4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Keune" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <com.prometteur.cpapp.utils.CheckBoxCustomFont
+            android:id="@+id/hairBrand5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Matrix" />
+
+        <com.prometteur.cpapp.utils.CheckBoxCustomFont
+            android:id="@+id/hairBrand6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="GK" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <com.prometteur.cpapp.utils.CheckBoxCustomFont
+            android:id="@+id/hairBrand7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TIGI"
+
+            />
+
+        <com.prometteur.cpapp.utils.CheckBoxCustomFont
+            android:id="@+id/hairBrand8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Streax" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <com.prometteur.cpapp.utils.CheckBoxCustomFont
+            android:id="@+id/hairBrand9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Wella" />
+
+        <com.prometteur.cpapp.utils.CheckBoxCustomFont
+            android:id="@+id/hairBrand10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Other" />
+    </LinearLayout>
+        </LinearLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+    <com.prometteur.cpapp.utils.CustomeEditText
+        android:id="@+id/edtHairOtherBrand"
+        style="@style/MyEditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
+        android:hint="@string/other_brands_example_brand1_brand2"
+        android:paddingLeft="15dp"
+        android:textColor="@android:color/black"
+        android:singleLine="true"
+        android:visibility="gone"
+        />
+    </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+</LinearLayout>

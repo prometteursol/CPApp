@@ -1,0 +1,128 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="bottomSheetDialogTheme">@style/CustomBottomSheetDialog</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+<!--express interest-->
+    <style name="MyTexViewStyleService" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MyEditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="colorControlActivated">@color/yellow</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="MyTexViewStyleQue" >
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:textSize">16dp</item>
+
+    </style>
+
+    <style name="MyTexViewStyleInfra" >
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="MyTexViewStyleTitle" >
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+
+    <style name="MonthPickerDialogStyle" >
+        <item name="monthBgColor">@color/white</item>
+        <item name="monthBgSelectedColor">@color/colorAccent</item>
+        <item name="monthFontColorSelected">@color/colorPrimaryDark</item>
+        <item name="monthFontColorNormal">@android:color/darker_gray</item>
+        <item name="monthFontColorDisabled">@color/white</item>
+
+        <item name="headerBgColor">@color/colorAccent</item>
+        <item name="headerFontColorSelected">#fff</item>
+        <item name="headerFontColorNormal">#85FFFFFF</item>
+        <item name="headerTitleColor">#fff</item>
+
+        <item name="dialogActionButtonColor">@color/colorAccent</item>
+    </style>
+
+    <!--calendarView-->
+
+    <style name="CalenderViewCustom" parent="Theme.AppCompat">
+        <item name="colorAccent">@color/skyBlueLight</item>
+        <item name="colorPrimary">@android:color/holo_blue_dark</item>
+        <item name="android:textColorPrimary">@color/black</item>
+    </style>
+    <style name="CalenderViewDateCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="CalenderViewWeekCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="CustomBottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottomsheet_login_rounded_white_background</item>
+    </style>
+
+
+    <!--ratingbar-->
+      <style name="AppThemeRatingBar" parent="Theme.AppCompat">
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="colorControlNormal">@color/skyBlueLight</item>
+        <item name="colorControlActivated">@color/yellow</item>
+        <item name="ratingBarStyleSmall">@style/Widget.AppCompat.RatingBar.Small</item>
+    </style>
+<!--&lt;!&ndash;switch&ndash;&gt;
+    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+        &lt;!&ndash; active thumb & track color (30% transparency) &ndash;&gt;
+        <item name="colorControlActivated">@color/skyBlueLight</item>
+        <item name="colorControlNormal">@color/skyBlueLight</item>
+
+        &lt;!&ndash; inactive thumb color &ndash;&gt;
+        <item name="colorSwitchThumbNormal">#E01313</item>
+        <item name="colorButtonNormal">#E01313</item>
+        <item name="android:tint">#E01313</item>
+        <item name="android:buttonTint">#E01313</item>
+
+
+        &lt;!&ndash; inactive track color (30% transparency) &ndash;&gt;
+        <item name="android:colorForeground">#E01313</item>
+    </style>-->
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+
+    </style>
+</resources>

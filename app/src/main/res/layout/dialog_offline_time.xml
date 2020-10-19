@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/layout_rounded_white_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/_10sdp">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_time"
+            android:tint="@color/skyBlueLight" />
+
+        <com.prometteur.cpapp.utils.TextViewCustomFont
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Offline Time"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+       <RadioGroup
+           android:id="@+id/rgOfflineTime"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="@dimen/_30sdp">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="SMS
+will be sent to Owner informing Offline, select offline duration and continue"
+app:buttonTint="@color/skyBlueLight"
+               android:textColor="@color/black"
+               android:gravity="center"
+               />
+           <RadioButton
+               android:id="@+id/rbOneHr"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="1 Hour"
+app:buttonTint="@color/skyBlueLight"
+               android:textColor="@color/black"
+               />
+           <RadioButton
+               android:id="@+id/rbTwoHr"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="2 Hours"
+               app:buttonTint="@color/skyBlueLight"
+               android:textColor="@color/black"/>
+           <RadioButton
+               android:id="@+id/rbFourHr"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="4 Hours"
+               app:buttonTint="@color/skyBlueLight"
+               android:textColor="@color/black"/>
+           <RadioButton
+               android:id="@+id/rbEightHr"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="8 Hours"
+               app:buttonTint="@color/skyBlueLight"
+               android:textColor="@color/black"/>
+           <RadioButton
+               android:id="@+id/rbCompleteDay"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Complete Day"
+               app:buttonTint="@color/skyBlueLight"
+               android:textColor="@color/black"/>
+       </RadioGroup>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        >
+        <com.prometteur.cpapp.utils.ButtonCustomFont
+            android:id="@+id/btnOk"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_bg_small"
+            android:onClick="closeDialog"
+            android:text="@string/ok"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"/>
+
+        <com.prometteur.cpapp.utils.ButtonCustomFont
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_bg_small"
+            android:onClick="closeDialog"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

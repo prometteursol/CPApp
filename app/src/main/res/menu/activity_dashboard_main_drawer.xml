@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@drawable/counterclockwise"
+            android:title="@string/history" />
+        <item
+            android:id="@+id/nav_statistics"
+            android:icon="@drawable/drawer_stats"
+            android:title="@string/statistics" />
+        <item
+            android:id="@+id/nav_performance"
+            android:icon="@drawable/drawer_perfomance"
+            android:title="@string/performance" />
+        <item
+            android:id="@+id/nav_rate_card"
+            android:icon="@drawable/drawer_rate_card"
+            android:title="@string/rate_card" />
+        <item
+            android:id="@+id/nav_brand"
+            android:icon="@drawable/drawer_brands"
+            android:title="@string/brands" />
+        <item
+            android:id="@+id/nav_blog"
+            android:icon="@drawable/drawer_blog"
+            android:title="@string/blog" />
+        <item
+            android:id="@+id/nav_privacy"
+            android:icon="@drawable/drawer_other"
+            android:title="@string/privacy_policy"
+            android:visible="false"/>
+        <item
+            android:id="@+id/nav_term_condi"
+            android:icon="@drawable/drawer_other"
+            android:title="@string/terms_conditions" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/drawer_other"
+            android:title="FAQ" />
+    </group>
+
+</menu>

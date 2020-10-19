@@ -1,0 +1,327 @@
+<androidx.core.widget.NestedScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/lightGray"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/layout_rounded_white_background"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@drawable/placeholder_gray_circle" />
+
+            <com.prometteur.cpapp.utils.TextViewCustomFont
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:marqueeRepeatLimit="-1"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RatingBar
+                    android:id="@+id/rBar"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:numStars="5"
+                    android:rating="0"
+                    android:theme="@style/AppThemeRatingBar" />
+
+                <com.prometteur.cpapp.utils.TextViewCustomFont
+                    android:id="@+id/tvRatingCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:gravity="center"
+                    android:marqueeRepeatLimit="-1"
+                    android:singleLine="true"
+                    android:text="(0 Reviews)"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_date_rounded_gray_background"
+                    android:gravity="center">
+
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:id="@+id/tvDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:drawableLeft="@drawable/ic_date"
+                        android:drawablePadding="10dp"
+                        android:drawableTint="@color/skyBlueLight"
+                        android:gravity="center"
+                        android:paddingTop="2dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_time_rounded_gray_background"
+                    android:gravity="center">
+
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:id="@+id/tvTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="5dp"
+                        android:drawableLeft="@drawable/ic_time"
+                        android:drawablePadding="10dp"
+                        android:drawableTint="@color/skyBlueLight"
+                        android:gravity="center"
+                        android:paddingTop="2dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycle_ComboSelected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSrNo"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycle_PromoOffSelected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recycle_ComboSelected"
+                />
+            <com.prometteur.cpapp.utils.TextViewCustomFont
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="-1"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="More Services"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/_5sdp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <com.prometteur.cpapp.utils.TextViewCustomFont
+                    android:id="@+id/tvAmt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:text="Amount : "
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <com.prometteur.cpapp.utils.TextViewCustomFont
+                    android:id="@+id/tvInclusivTax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="-1"
+                    android:singleLine="true"
+                    android:text="(Incl. GST)"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linBtnSectionForTU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <com.prometteur.cpapp.utils.ButtonCustomFont
+                    android:id="@+id/btnEnterStartOtp"
+                    android:layout_width="170dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:background="@drawable/btn_bg_green"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="Enter Start OTP"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp" />
+
+                <com.prometteur.cpapp.utils.ButtonCustomFont
+                    android:id="@+id/btnCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_bg_red"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="Cancel"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linBtnSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+
+                <com.prometteur.cpapp.utils.ButtonCustomFont
+                    android:id="@+id/btnAccept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_bg_green"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="Accept"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp" />
+
+                <com.prometteur.cpapp.utils.ButtonCustomFont
+                    android:id="@+id/btnReject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_bg_red"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="Reject"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp" />
+            </LinearLayout>
+
+            <com.prometteur.cpapp.utils.ButtonCustomFont
+                android:id="@+id/btnReschedule"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bg"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="Reschedule"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp" />
+            <com.prometteur.cpapp.utils.ButtonCustomFont
+                android:id="@+id/btnRemoveFromHere"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bg_red"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="Remove from here"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                android:visibility="gone"/>
+            <!--
+            android:background="@drawable/btn_rounded_background_white_yellow_border"
+            -->
+        </LinearLayout>
+
+        <com.prometteur.cpapp.utils.TextViewCustomFont
+            android:id="@+id/tvAppointNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_weight="0.4"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="-1"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text="Appo ID. 0"
+            android:textColor="@color/skyBlueDark"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+
+        <com.prometteur.cpapp.utils.TextViewCustomFont
+            android:id="@+id/tvAcceptExTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight="0.4"
+
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@color/skyBlueDark"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_rounded_white_background"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/img_dialog_shape_bg"
+            >
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_key_password"
+                android:tint="@color/white"
+
+                />
+        </RelativeLayout>
+        <com.prometteur.cpapp.utils.TextViewCustomFont
+            android:id="@+id/tvLableStartEnd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/start_otp"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:textFont="poppins_semibold"
+            />
+        <com.prometteur.cpapp.utils.TextViewCustomFont
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/please_enter_otp_here"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            />
+        <in.aabhasjindal.otptextview.OtpTextView
+            android:id="@+id/otp_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            app:height="40dp"
+            app:width="40dp"
+            app:bar_enabled="true"
+            app:bar_active_color="@color/skyBlueDark"
+            app:bar_height="2dp"
+            app:length="4"
+            android:layout_gravity="center"
+            app:otp_text_size="24dp"
+            />
+        <com.prometteur.cpapp.utils.ButtonCustomFont
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="@string/start"
+            android:id="@+id/btnStartEnd"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:background="@drawable/btn_bg"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:onClick="closeDialog"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

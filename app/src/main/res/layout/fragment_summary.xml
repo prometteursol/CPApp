@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+        <com.prometteur.cpapp.utils.TextViewCustomFont
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Weekly-"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            android:padding="10dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:padding="@dimen/_5sdp">
+
+
+            <TextView
+                android:id="@+id/dot1"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:background="@color/skyBlueLight"
+                android:layout_centerVertical="true"
+                />
+
+            <com.prometteur.cpapp.utils.TextViewCustomFont
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toEndOf="@+id/dot1"
+                android:text="Net Amount"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:layout_centerVertical="true"/>
+
+            <com.prometteur.cpapp.utils.TextViewCustomFont
+                android:id="@+id/tvNetAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tvNetAmountTitle"
+                android:text="0.00 /- "
+                android:textColor="@color/skyBlueLight"
+                android:textSize="14dp"
+                android:layout_centerVertical="true"/>
+
+            <com.prometteur.cpapp.utils.TextViewCustomFont
+                android:id="@+id/tvNetAmountTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Avg cost"
+                android:textColor="@color/darkGray"
+                android:textSize="14dp"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:gravity="center_vertical"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/dot2"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:background="@color/skyBlueLight"
+                android:layout_centerVertical="true"
+                />
+            <com.prometteur.cpapp.utils.TextViewCustomFont
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toEndOf="@+id/dot2"
+                android:text="Per Service"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:layout_centerVertical="true"/>
+
+            <com.prometteur.cpapp.utils.TextViewCustomFont
+                android:id="@+id/tvPerService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tvPerServiceTitle"
+                android:text="0.00 /- "
+                android:textColor="@color/skyBlueLight"
+                android:textSize="14dp"
+                android:layout_centerVertical="true"/>
+
+            <com.prometteur.cpapp.utils.TextViewCustomFont
+                android:id="@+id/tvPerServiceTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Avg cost"
+                android:textColor="@color/darkGray"
+                android:textSize="14dp"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:gravity="center_vertical"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/dot3"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:background="@color/skyBlueLight"
+                android:layout_centerVertical="true"
+                />
+            <com.prometteur.cpapp.utils.TextViewCustomFont
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toEndOf="@+id/dot3"
+                android:text="Per Appointment"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:layout_centerVertical="true"/>
+
+            <com.prometteur.cpapp.utils.TextViewCustomFont
+                android:id="@+id/tvPerAppoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tvPerAppointTitle"
+                android:text="0.00 /- "
+                android:textColor="@color/skyBlueLight"
+                android:textSize="14dp"
+                android:layout_centerVertical="true"/>
+            <com.prometteur.cpapp.utils.TextViewCustomFont
+                android:id="@+id/tvPerAppointTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Avg cost"
+                android:textColor="@color/darkGray"
+                android:textSize="14dp"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:background="@color/skyBlueLighter"
+            >
+
+            <TextView
+                android:id="@+id/dot4"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:background="@color/skyBlueLight"
+                android:layout_centerVertical="true"
+                />
+
+            <com.prometteur.cpapp.utils.TextViewCustomFont
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toEndOf="@+id/dot4"
+                android:text="Weekly Services Number"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:layout_centerVertical="true"/>
+
+            <com.prometteur.cpapp.utils.TextViewCustomFont
+                android:id="@+id/tvServiceNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="00000"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

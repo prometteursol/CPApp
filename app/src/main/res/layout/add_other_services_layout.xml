@@ -1,0 +1,68 @@
+<LinearLayout
+    android:id="@+id/linOtherServiceBlock"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<!--
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">-->
+        <com.prometteur.cpapp.utils.CustomeEditText
+            android:id="@+id/otherServiceName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/darker_gray"
+            android:hint="@string/service_name"
+            android:paddingLeft="15dp"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="16dp"
+            />
+
+    <!--</com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">-->
+        <com.prometteur.cpapp.utils.CustomeEditText
+            android:id="@+id/otherServiceNoofOpt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/darker_gray"
+            android:hint="@string/no_of_operators"
+            android:paddingLeft="15dp"
+            android:inputType="number"
+            android:maxLength="2"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="16dp"
+            android:singleLine="true"
+            />
+
+   <!-- </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">-->
+        <com.prometteur.cpapp.utils.CustomeEditText
+            android:id="@+id/otherSerOtherBrand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/darker_gray"
+            android:hint="@string/other_brands_example_brand1_brand2"
+            android:paddingLeft="15dp"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:singleLine="true"
+            android:textSize="16dp"/>
+    <!--</com.google.android.material.textfield.TextInputLayout>-->
+</LinearLayout>

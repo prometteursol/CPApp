@@ -1,0 +1,174 @@
+<resources>
+    <string name="app_name">Mooi Pro</string>
+    <string name="home">Home</string>
+    <string name="appointment">Appointments</string>
+    <string name="history">History</string>
+    <string name="profile">Profile</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="your_password_have_been_changed">Your Password have been changed!</string>
+    <string name="done">Done</string>
+    <string name="success">Success!</string>
+    <string name="start">Start</string>
+    <string name="please_enter_otp_here">Please enter OTP here</string>
+    <string name="start_otp">Start OTP</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="login">Login</string>
+    <string name="express_interest">Express Interest</string>
+    <string name="express_interest_btn"><u>Express Interest</u></string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Salon Name</string>
+    <string name="nav_header_subtitle">Location</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="title_activity_dashboard_main">DashboardMainActivity</string>
+    <string name="statistics">Statistics</string>
+    <string name="rate_card">Rate Card</string>
+    <string name="blog">Blog</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="help">Help</string>
+
+    <!--Express Interest-->
+    <string name="no_of_operators">No. of operators</string>
+    <string name="other_brands_example_brand1_brand2">Other brands (Example: brand1, brand2)</string>
+    <string name="no_of_housekeeping_staff">No. of Housekeeping staff</string>
+    <string name="no_of_management_staff">No. of Management staff</string>
+    <string name="no_of_hair_skin_chairs">No. of Hair Skin chairs</string>
+    <string name="no_of_housekeeping_staff_star">No. of Housekeeping staff*</string>
+    <string name="no_of_management_staff_star">No. of Management staff*</string>
+    <string name="no_of_hair_skin_chairs_star">No. of Hair Skin chairs*</string>
+    <string name="infrastructure_details">Infrastructure Details</string>
+    <string name="services_offered">Services Offered</string>
+
+
+    <string name="salon_name">Salon Name</string>
+    <string name="address">Address</string>
+    <string name="establishment_year">Establishment Year</string>
+    <string name="working_hours">Working Hours</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="gst">GST:</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="webstie">Website</string>
+    <string name="email_id">Email ID*</string>
+    <string name="facebook">Facebook</string>
+    <string name="instagram">Instagram</string>
+    <string name="salon_details">Salon Details</string>
+    <string name="owner_details">Owner Details</string>
+    <string name="owner_name">Owner Name</string>
+    <string name="salon_manager_details">Salon Manager Details</string>
+    <string name="manager_name">Manager Name</string>
+    <string name="back">Back</string>
+    <string name="submit">Submit</string>
+    <string name="service_name">Service Name</string>
+    <string name="send">Send</string>
+    <string name="gst_number">GST Number</string>
+    <string name="pincode">Pin Code</string>
+    <string name="certification">Certification</string>
+    <string name="Salon_timing">Salon Timing</string>
+    <string name="landline_or_alternate_contact_number">Landline or Alternate contact number</string>
+    <string name="education">Education (relevant to the industry)</string>
+    <string name="password_should_be_min_8_characters">Password should be min 8 characters</string>
+    <string name="enter_username">Enter Email</string>
+    <string name="enter_password_with_special_characters">Password should be at least 8 characters long, must include letters, numbers and special characters.</string>
+    <string name="please_wait">Please wait...</string>
+    <string name="please_check_newtork_connection">Please check network connection</string>
+    <string name="logout">Logout</string>
+    <string name="went_wrong">Something went wrong. Please try again!</string>
+    <string name="enter_valid_username">Enter valid Email</string>
+    <string name="mandatory_field_msg">This field is mandatory</string>
+    <string name="please_select_state">Select State</string>
+    <string name="please_select_city">Select City</string>
+    <string name="six_digits_pincode">Enter 6 digits Pin Code</string>
+    <string name="fifteen_digits_gst_number">Enter 15 digits GST number</string>
+    <string name="valid_web_url">Please enter valid Website</string>
+    <string name="valid_email_id">Please enter valid Email ID</string>
+    <string name="select_five_images_msg">You can select only five images</string>
+    <string name="please_select_category">Please select category</string>
+
+    <string name="toast_image_intent_null">Image picker option is missing!</string>
+    <string name="lbl_take_camera_picture">Take a picture</string>
+    <string name="lbl_choose_from_gallery">Choose from gallery</string>
+    <string name="lbl_set_profile_photo">Set Salon image</string>
+    <string name="gst_rate">GST Rate</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="time_selection_err">You can not select previous time</string>
+    <string name="owner_name_star">Owner Name*</string>
+    <string name="contact_number_star">Contact Number*</string>
+    <string name="salon_name_star">Salon Name*</string>
+    <string name="manager_name_star">Manager Name*</string>
+    <string name="address_star">Address*</string>
+    <string name="pin_code_star">Pin Code*</string>
+    <string name="should_not_spec_char">First character should not special character</string>
+    <string name="enter_ten_digits">Enter valid 10 digits contact number</string>
+    <string name="select_gst_yes_no">Select GST Yes/No</string>
+    <string name="enter_salon_name">Enter Salon Name</string>
+    <string name="enter_manager_name">Enter Manager Name</string>
+    <string name="enter_address">Enter Address</string>
+    <string name="enter_pin_code">Enter Pin Code</string>
+    <string name="enter_contact_number">Enter Contact Number</string>
+    <string name="enter_owner_name">Enter Owner Name</string>
+    <string name="enter_noof_staff">Enter No. of Staff</string>
+    <string name="enter_noof_chairs">Enter No. of Chairs</string>
+    <string name="enter_insti_name">Enter Institute Name</string>
+    <string name="submit_request">Submit Request</string>
+    <string name="arleady_have_an_account_login">Already have an account? <font color="#64E1E1">Login</font></string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="please_verify_your_email_to_continue_n_otp_sent_on_email">Please verify your Email to continue\n  OTP sent on Email*</string>
+    <string name="please_verify_your_mobile_to_continue_n_otp_sent_on_mobile_number">Please verify your Mobile Number to continue\n  OTP sent on Mobile Number*</string>
+    <string name="verify">Verify</string>
+    <string name="new_password">New password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="request_otp">Request OTP</string>
+    <string name="u_view_u"><u>View</u></string>
+    <string name="for_which_period_do_you_need_history">For which period do you need History?</string>
+    <string name="last_month">Last Month</string>
+    <string name="last_3_months">Last 3 Months</string>
+    <string name="notification">Notification</string>
+    <string name="total_earning">Total Earning</string>
+    <string name="total_rating">Total Rating\n</string>
+    <string name="open">OPEN</string>
+    <string name="collect_cash">Collect Cash</string>
+    <string name="invoice">Day\'s Business</string>
+    <string name="finish">Enter End OTP</string>
+    <string name="brands">Brands</string>
+    <string name="performance">Performance</string>
+    <string name="ok">Ok</string>
+    <string name="loading">Loading...</string>
+    <string name="please_enter_registered_email_id">Please enter registered Email</string>
+    <string name="please_enter_valid_registered_email_id">Please enter registered valid Email</string>
+    <string name="please_enter_registered_mobile">Please enter registered Mobile number</string>
+    <string name="service_completed">Service completed</string>
+    <string name="request_rejected">Request rejected</string>
+    <string name="appointment_requests">Appointment Requests</string>
+    <string name="request_cancelled">Request cancelled</string>
+    <string name="weekly_off">Weekly Off</string>
+    <string name="by_clicking_on_submit_you_agree_to_our_terms_amp_conditions">By clicking on submit you agree to our <font color="#64E1E1">terms &amp; conditions.</font></string>
+
+    <string name="cancellation_n_request">Cancellation \n Request!</string>
+    <string name="penalty">Penalty -</string>
+    <string name="cancellation_time_16hrs_0_n_8_16_50_8hr_100_penalty"><![CDATA[Cancellation Time > 16 Hr > 0%,\n 0-16 Hr > 50%, 8 Hr-100% penalty.]]></string>
+    <string-array name="gst_rate_array">
+        <item>Select GST Rate</item>
+        <item>0%</item>
+        <item>1%</item>
+        <item>5%</item>
+        <item>6%</item>
+        <item>12%</item>
+        <item>18%</item>
+    </string-array>
+
+    <string-array name="city_array">
+        <item>Select City</item>
+    </string-array>
+
+    <string-array name="main_category_array">
+        <item>Select Main Category</item>
+        <item>Salon</item>
+        <item>Institute</item>
+    </string-array>
+</resources>

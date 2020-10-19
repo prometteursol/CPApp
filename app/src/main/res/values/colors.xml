@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1c1b17</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#088383</color>
+    <!--<color name="colorAccent">#FFC800</color>-->
+
+    <color name="white">#ffffff</color>
+    <color name="yellow">#FFC800</color>
+    <!--<color name="yellow">#FFBF00</color>-->
+    <color name="black">#1c1b17</color>
+    <color name="purple">#3930d8</color>
+    <color name="green">#11b719</color>
+    <color name="darkGray">#626161</color>
+
+    <color name="lightGray">#f6f6f6</color>
+    <color name="AppointmentsBgGrey">#f0f0f0</color><!--#F0F0F0-->
+    <!--<color name="lightGray">#F1EFEF</color>-->
+    <color name="orange">#ff9800</color>
+    <color name="red">#f44336</color>
+
+    <color name="blackTransparent">#75000000</color>
+    <color name="whiteTransparent">#F0F0F0</color>
+
+    <!--timelineview-->
+    <color name="colorDefaultBackground">#F9F9F9</color>
+    <color name="colorDefaultTitle">#414fca</color>
+    <color name="colorDefaultSubTitle">#d16767</color>
+    <color name="colorDefaultLine">#51ae45</color>
+    <color name="colorDefaultCircle">#51ae45</color>
+    <color name="colorDefaultStroke">#F9F9F9</color>
+
+<!--slider-->
+    <color name="glide_slider_background_color">#000000</color>
+    <color name="glide_slider_indicator_color">#FFFFFF</color>
+    <color name="glide_slider_description_color">#FFFFFF</color>
+    <color name="glide_slider_description_background_color">#77000000</color>
+
+    <!--stats background-->
+    <color name="start_color_one">#0D92D1</color>
+    <color name="end_color_one">#81C8E9</color>
+    <color name="start_color_two">#C126DB</color>
+    <color name="end_color_two">#B87CC4</color>
+
+
+    <!--colors for service list-->
+    <color name="skyBlue1"> #64E1E1</color>
+    <color name="skyBlue2">#4DADAD</color>
+    <color name="skyBlue3">#429494</color>
+    <color name="skyBlue4">#337575</color>
+    <color name="skyBlue5">#2E6B6B</color>
+    <color name="skyBlue6">#386969</color>
+    <color name="skyBlue7">#224949</color>
+
+
+   <!-- Profile Services background color-
+    #fd6c57
+
+    #172d40
+
+    #fe457c
+
+    #615dd9
+
+    #fe9654-->
+
+
+
+    <!--new color code to update design-->
+    <color name="skyBlueDark">#088383</color>
+    <color name="skyBlueLight">#64E1E1</color>
+    <color name="greenDark">#138D56</color>
+    <color name="greenLight">#77D3A7</color>
+
+    <color name="redDark">#500712</color>
+    <color name="redLight">#E04E63</color>
+
+
+    <color name="yellowTransparent">#7AFFC800</color>
+
+    <color name="termericColor">#ED8B1B</color>
+<!--summary services number-->
+    <color name="skyBlueLighter">#5964E1E1</color>
+</resources>
+
+
+

@@ -1,0 +1,202 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listSurQue"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.prometteur.cpapp.utils.TextViewCustomFont
+
+        style="@style/MyTexViewStyleInfra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
+        android:text="Reserved Parking"
+        android:textColor="@android:color/black" />
+
+
+    <RadioGroup
+        android:id="@+id/rgRP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <com.prometteur.cpapp.utils.RadioButtonCustomFont
+            android:id="@+id/rpYes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Yes" />
+
+        <com.prometteur.cpapp.utils.RadioButtonCustomFont
+            android:id="@+id/rpNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="No" />
+    </RadioGroup>
+
+ <com.prometteur.cpapp.utils.TextViewCustomFont
+
+        style="@style/MyTexViewStyleInfra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
+        android:text="TV"
+        android:textColor="@android:color/black" />
+
+
+    <RadioGroup
+        android:id="@+id/rgTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <com.prometteur.cpapp.utils.RadioButtonCustomFont
+            android:id="@+id/tvYes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Yes" />
+
+        <com.prometteur.cpapp.utils.RadioButtonCustomFont
+            android:id="@+id/tvNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="No" />
+    </RadioGroup>
+
+ <com.prometteur.cpapp.utils.TextViewCustomFont
+
+        style="@style/MyTexViewStyleInfra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
+        android:text="Free WiFi"
+        android:textColor="@android:color/black" />
+
+
+    <RadioGroup
+        android:id="@+id/rgWF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <com.prometteur.cpapp.utils.RadioButtonCustomFont
+            android:id="@+id/wfYes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Yes" />
+
+        <com.prometteur.cpapp.utils.RadioButtonCustomFont
+            android:id="@+id/wfNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="No" />
+    </RadioGroup>
+
+ <com.prometteur.cpapp.utils.TextViewCustomFont
+        style="@style/MyTexViewStyleInfra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
+        android:text="AC"
+        android:textColor="@android:color/black" />
+
+
+    <RadioGroup
+        android:id="@+id/rgAc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <com.prometteur.cpapp.utils.RadioButtonCustomFont
+            android:id="@+id/acYes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Yes" />
+
+        <com.prometteur.cpapp.utils.RadioButtonCustomFont
+            android:id="@+id/acNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="No" />
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNoOfHouseKeepStaff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+    <com.prometteur.cpapp.utils.CustomeEditText
+        android:id="@+id/noOfHKStaff"
+        style="@style/MyEditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
+        android:hint="@string/no_of_housekeeping_staff_star"
+        android:inputType="number"
+        android:maxLength="2"
+        android:singleLine="true"
+        android:paddingLeft="15dp"
+        android:digits="0123456789"
+        android:textColor="@android:color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNoOfMgmtStaff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+    <com.prometteur.cpapp.utils.CustomeEditText
+        android:id="@+id/noOfMgmtStaff"
+        style="@style/MyEditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
+        android:hint="@string/no_of_management_staff_star"
+        android:inputType="number"
+        android:singleLine="true"
+        android:maxLength="2"
+        android:paddingLeft="15dp"
+        android:digits="0123456789"
+        android:textColor="@android:color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNoOfSkinChair"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+    <com.prometteur.cpapp.utils.CustomeEditText
+        android:id="@+id/noOfHairSkinChairs"
+        style="@style/MyEditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
+        android:hint="@string/no_of_hair_skin_chairs_star"
+        android:paddingLeft="15dp"
+        android:inputType="number"
+        android:singleLine="true"
+        android:digits="0123456789"
+        android:maxLength="2"
+        android:textColor="@android:color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>

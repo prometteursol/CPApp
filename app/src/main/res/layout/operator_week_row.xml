@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   >
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        app:cardBackgroundColor="@color/white"
+        android:paddingBottom="5dp"
+        >
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/placeholder_gray_circle"
+                    android:layout_centerVertical="true"
+                    />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_toRightOf="@+id/profileImage"
+                        android:layout_centerVertical="true"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.prometteur.cpapp.utils.TextViewCustomFont
+                                android:id="@+id/tvName"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="5dp"
+                                android:text=""
+                                android:singleLine="true"
+                                android:textSize="14dp"
+                                android:textStyle="bold"
+                                android:layout_weight="0.4"
+                                android:marqueeRepeatLimit="-1"
+                                android:gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:textColor="@color/black"
+                                />
+                            <com.prometteur.cpapp.utils.TextViewCustomFont
+                                android:id="@+id/tvCost"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:text="0.00 /- "
+                                android:layout_gravity="right"
+                                android:gravity="right"
+                                android:layout_weight="0.6"
+                                android:textColor="@color/skyBlueLight"
+                                />
+                        </LinearLayout>
+
+
+
+
+
+
+                    </LinearLayout>
+                <com.prometteur.cpapp.utils.TextViewCustomFont
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="right"
+                    android:background="@color/gray"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_below="@+id/profileImage"
+                    />
+            </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>

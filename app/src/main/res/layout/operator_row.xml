@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linOperator"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+   >
+
+
+    <com.github.siyamed.shapeimageview.CircularImageView
+        android:id="@+id/civ_OperatorImage"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:src="@drawable/placeholder_gray_circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:siBorderWidth="2dp"
+        app:siBorderColor="@color/grey"
+
+        />
+    <RatingBar
+        android:id="@+id/rbOptRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:rating="0"
+        android:numStars="5"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        app:layout_constraintTop_toBottomOf="@id/civ_OperatorImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        />
+    <com.prometteur.cpapp.utils.TextViewCustomFont
+        android:id="@+id/tvOperatorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text=""
+        android:singleLine="true"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:marqueeRepeatLimit="-1"
+        android:ellipsize="marquee"
+        android:textColor="@color/black"
+        android:gravity="center"
+        />
+</LinearLayout>

@@ -1,0 +1,130 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+// Apply the Crashlytics Gradle plugin
+apply plugin: 'com.google.firebase.crashlytics'
+
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.0"
+    defaultConfig {
+        applicationId "com.prometteur.cpapp"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 2
+        versionName "1.0.3"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        viewBinding.enabled = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    bundle {
+
+        language {
+            enableSplit = false
+        }
+    }
+}
+repositories {
+    maven { url 'https://jitpack.io' }
+    mavenCentral()
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation 'com.google.firebase:firebase-messaging:20.3.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    //StickyTimeLine v0.0.20 and above only supports projects that have been migrated to androidx.
+    // implementation 'com.github.sangcomz:StickyTimeLine:v0.0.20'
+    implementation "androidx.core:core-ktx:1.3.2"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation "androidx.recyclerview:recyclerview:$androidx_version"
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+    //implementation project(path: ':stickytimelineview')//for image circle
+
+    //retrofit using rxjava android
+    implementation('com.squareup.retrofit2:retrofit:2.3.0')   //support 21+
+            {
+                exclude module: 'okhttp'
+            }
+
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.6'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+//multiple device dimensions
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    //otpview
+    implementation 'com.github.aabhasr1:OtpView:v1.1.2-ktx'
+
+
+    //for year picker
+    implementation 'com.whiteelephant:monthandyearpicker:1.3.0' // min 14 targetSdk 27
+
+    //searchable spinner
+    implementation 'com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1'
+    // min 15 targetSdk 23
+
+    implementation 'com.github.pratikbutani:MultiSelectSpinner:-SNAPSHOT'  // min 14 targetSdk 27
+//timeline recyclerview for show appointment
+    implementation 'com.github.vipulasri:timelineview:1.1.3'
+//slider for dashboard ads
+    implementation "com.github.bumptech.glide:glide:4.9.0"
+    annotationProcessor "com.github.bumptech.glide:compiler:4.9.0"
+
+    implementation "com.github.firdausmaulan:GlideSlider:1.5.1"
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'   //min 14+
+
+    //for sms verification
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+    implementation 'com.google.android.gms:play-services-auth-api-phone:17.1.0'
+
+    annotationProcessor 'com.jakewharton:butterknife:7.0.1'
+    implementation 'com.jakewharton:butterknife:7.0.1'
+
+
+    implementation 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
+
+
+    //imagepicker or capture image
+    implementation "com.karumi:dexter:5.0.0"  // min 18 targetSdk 28
+    implementation 'com.github.yalantis:ucrop:2.2.4'
+    implementation project(path: ':weekcalendar')  //support min 14 targetSdk 28 androidX support
+    implementation 'joda-time:joda-time:2.10.1'
+
+
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
+    //custome toast
+    implementation 'com.github.GrenderG:Toasty:1.4.2'
+    // Recommended: Add the Firebase SDK for Google Analytics.
+    implementation 'com.google.firebase:firebase-analytics:17.5.0'
+
+    // Add the Firebase Crashlytics SDK.
+    implementation 'com.google.firebase:firebase-crashlytics:17.2.1'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+
+}
+apply plugin: 'com.google.gms.google-services'
+

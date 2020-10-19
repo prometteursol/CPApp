@@ -1,0 +1,481 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".statistics.PaymentDetailsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:contentInsetStart="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStartWithNavigation="0dp"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?actionBarSize"
+            android:background="@color/lightGray"
+            android:orientation="vertical">
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_10sdp">
+
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:id="@+id/tvServicesCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="₹ 8500"
+                        android:textColor="@color/skyBlueDark"
+                        android:textSize="18dp" />
+
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="Balance"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp">
+
+                    <RatingBar
+                        android:id="@+id/ratingTotal1"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="1"
+                        android:progressTint="@color/skyBlueLight"
+                        android:rating="1" />
+
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toEndOf="@+id/ratingTotal1"
+                        android:text="Earnings"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:id="@+id/tvRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="₹ 0.00 /-"
+                        android:textColor="@color/skyBlueLight"
+                        android:textSize="14dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp">
+
+                    <RatingBar
+                        android:id="@+id/ratingThirtyDaysTotal"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="1"
+                        android:progressTint="@color/skyBlueLight"
+                        android:rating="1" />
+
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toEndOf="@+id/ratingThirtyDaysTotal"
+                        android:text="Payouts"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:id="@+id/ratingWeek"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="₹ 0.00 /-"
+                        android:textColor="@color/skyBlueLight"
+                        android:textSize="14dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp">
+
+                    <RatingBar
+                        android:id="@+id/ratingThirtyDaysTotal1"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="1"
+                        android:progressTint="@color/skyBlueLight"
+                        android:rating="1" />
+
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toEndOf="@+id/ratingThirtyDaysTotal1"
+                        android:text="Expenses"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:id="@+id/ratingWeekee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="₹ 0.00 /-"
+                        android:textColor="@color/skyBlueLight"
+                        android:textSize="14dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp">
+
+                    <RatingBar
+                        android:id="@+id/ratingThirtyDaysTotal2"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="1"
+                        android:progressTint="@color/skyBlueLight"
+                        android:rating="1" />
+
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toEndOf="@+id/ratingThirtyDaysTotal2"
+                        android:text="Previous Balance"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:id="@+id/ratingWeek12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="₹ 0.00 /-"
+                        android:textColor="@color/skyBlueLight"
+                        android:textSize="14dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp">
+
+
+                    <TextView
+                        android:id="@+id/dot1"
+                        android:layout_width="5dp"
+                        android:layout_height="5dp"
+                        android:background="@color/skyBlueLight"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toEndOf="@+id/dot1"
+                        android:text="Gross Earnings"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:id="@+id/tvGrossEar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="₹ 0.00 /-"
+                        android:textColor="@color/skyBlueLight"
+                        android:textSize="14dp" />
+
+                </RelativeLayout>
+                <com.prometteur.cpapp.utils.TextViewCustomFont
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lightGray" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/dot2"
+                        android:layout_width="5dp"
+                        android:layout_height="5dp"
+                        android:background="@color/skyBlueLight"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toEndOf="@+id/dot2"
+                        android:text="Commission"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:id="@+id/tvCommission"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="₹ 0.00 /-"
+                        android:textColor="@color/skyBlueLight"
+                        android:textSize="14dp" />
+
+                </RelativeLayout>
+                <com.prometteur.cpapp.utils.TextViewCustomFont
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lightGray" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/dot3"
+                        android:layout_width="5dp"
+                        android:layout_height="5dp"
+                        android:background="@color/skyBlueLight"
+                        android:layout_centerVertical="true"
+                        />
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toEndOf="@+id/dot3"
+                        android:text="Cancellation Charges"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:id="@+id/tvCancelCharge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="₹ 0.00 /-"
+                        android:textColor="@color/skyBlueLight"
+                        android:textSize="14dp" />
+
+                </RelativeLayout>
+                <com.prometteur.cpapp.utils.TextViewCustomFont
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lightGray" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/dot4"
+                        android:layout_width="5dp"
+                        android:layout_height="5dp"
+                        android:background="@color/skyBlueLight"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toEndOf="@+id/dot4"
+                        android:text="Previous Week Net Balance"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:id="@+id/tvPreWeekNetBal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="₹ 0.00 /-"
+                        android:textColor="@color/skyBlueLight"
+                        android:textSize="14dp" />
+
+                </RelativeLayout>
+                <com.prometteur.cpapp.utils.TextViewCustomFont
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lightGray" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/dot5"
+                        android:layout_width="5dp"
+                        android:layout_height="5dp"
+                        android:background="@color/skyBlueLight"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toEndOf="@+id/dot5"
+                        android:text="Amount Paid Online"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:id="@+id/tvAmtPdFromAppoint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="₹ 0.00 /-"
+                        android:textColor="@color/skyBlueLight"
+                        android:textSize="14dp" />
+
+                </RelativeLayout>
+                <com.prometteur.cpapp.utils.TextViewCustomFont
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lightGray" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/dot6"
+                        android:layout_width="5dp"
+                        android:layout_height="5dp"
+                        android:background="@color/skyBlueLight"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toEndOf="@+id/dot6"
+                        android:text="Cash Collected"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:id="@+id/tvCashColleced"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="₹ 0.00 /-"
+                        android:textColor="@color/skyBlueLight"
+                        android:textSize="14dp" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+

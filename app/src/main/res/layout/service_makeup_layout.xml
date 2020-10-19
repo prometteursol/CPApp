@@ -1,0 +1,163 @@
+<LinearLayout android:id="@+id/listSurQue"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingEnd="10dp"
+        >
+        <com.prometteur.cpapp.utils.CheckBoxCustomFont
+            android:id="@+id/cbIsMakeupCheck"
+            style="@style/MyTexViewStyleService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/darker_gray"
+            />
+        <com.prometteur.cpapp.utils.CheckBoxCustomFont
+            android:id="@+id/cbIsMakeup"
+            style="@style/MyTexViewStyleService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/darker_gray"
+            android:button="@null"
+            android:text="Makeup"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linMakeupBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+    <com.prometteur.cpapp.utils.CustomeEditText
+        android:id="@+id/edtNoOfOptMakeup"
+        style="@style/MyEditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
+        android:hint="@string/no_of_operators"
+        android:paddingLeft="15dp"
+        android:inputType="number"
+        android:maxLength="2"
+        android:textColor="@android:color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.prometteur.cpapp.utils.TextViewCustomFont
+        style="@style/MyTexViewStyleQue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
+        android:text="Brand Used"
+        android:paddingLeft="15dp"
+        android:textColor="@android:color/black" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <com.prometteur.cpapp.utils.CheckBoxCustomFont
+            android:id="@+id/makeupBrand1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="MAC"
+
+            />
+
+        <com.prometteur.cpapp.utils.CheckBoxCustomFont
+            android:id="@+id/makeupBrand2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Revlon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <com.prometteur.cpapp.utils.CheckBoxCustomFont
+            android:id="@+id/makeupBrand3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Dazzler" />
+
+        <com.prometteur.cpapp.utils.CheckBoxCustomFont
+            android:id="@+id/makeupBrand4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sugar" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <com.prometteur.cpapp.utils.CheckBoxCustomFont
+            android:id="@+id/makeupBrand5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Krayolan" />
+
+        <com.prometteur.cpapp.utils.CheckBoxCustomFont
+            android:id="@+id/makeupBrand6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Other" />
+    </LinearLayout>
+        </LinearLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+    <com.prometteur.cpapp.utils.CustomeEditText
+        android:id="@+id/edtMakeupOtherBrand"
+        style="@style/MyEditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
+        android:hint="@string/other_brands_example_brand1_brand2"
+        android:paddingLeft="15dp"
+        android:textColor="@android:color/black"
+        android:singleLine="true"
+        android:visibility="gone"
+        />
+    </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+</LinearLayout>

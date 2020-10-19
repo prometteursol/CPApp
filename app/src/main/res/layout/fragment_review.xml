@@ -1,0 +1,37 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <com.prometteur.cpapp.utils.TextViewCustomFont
+        android:id="@+id/tvReviewCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All Reviews (0)"
+        android:textColor="@color/grey"
+        android:layout_marginLeft="5dp"
+        android:padding="8dp"
+        android:singleLine="true"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/_5sdp"
+        android:clipToPadding="false"
+        tools:listitem="@layout/review_profile_row"
+        android:layout_below="@+id/tvReviewCount"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+    <include layout="@layout/activity_no_data"/>
+</LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

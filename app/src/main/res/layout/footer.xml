@@ -1,0 +1,10 @@
+<com.prometteur.cpapp.utils.TextViewCustomFont android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="5dp"
+    android:text="Design By - Prometteur Solutions Pvt Ltd."
+    android:textColor="@color/grey"
+    android:layout_marginTop="@dimen/_10sdp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:layout_marginBottom="@dimen/_20sdp"
+    />

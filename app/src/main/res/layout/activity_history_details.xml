@@ -1,0 +1,568 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".history.HistoryActivity"
+    android:id="@+id/coordLayout"
+    android:theme="@style/Theme.MaterialComponents">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:contentInsetStartWithNavigation="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/pullToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            app:cardBackgroundColor="@color/white"
+
+            >
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:padding="@dimen/_10sdp"
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/placeholder_gray_circle"
+                    android:layout_alignParentTop="true" />
+                <LinearLayout
+                    android:id="@+id/linTopView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_toRightOf="@+id/profileImage"
+                    >
+
+
+                        <com.prometteur.cpapp.utils.TextViewCustomFont
+                            android:id="@+id/tvName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text=""
+                            android:singleLine="true"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:marqueeRepeatLimit="-1"
+                            android:ellipsize="marquee"
+                            android:textColor="@color/black"
+                            />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.prometteur.cpapp.utils.TextViewCustomFont
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gender : "
+                            android:singleLine="true"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/darkGray"
+                            />
+                        <com.prometteur.cpapp.utils.TextViewCustomFont
+                            android:id="@+id/tvGender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text=""
+                            android:layout_gravity="right"
+                            android:gravity="right"
+                            android:textColor="@color/black"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.prometteur.cpapp.utils.TextViewCustomFont
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Appointment ID : "
+                            android:singleLine="true"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/darkGray"
+                            />
+                        <com.prometteur.cpapp.utils.TextViewCustomFont
+                            android:id="@+id/tvAppNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:layout_gravity="right"
+                            android:gravity="right"
+                            android:textColor="@color/skyBlueDark"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.prometteur.cpapp.utils.TextViewCustomFont
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Selected Timeslot : "
+                            android:singleLine="true"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/darkGray"
+                            />
+                        <com.prometteur.cpapp.utils.TextViewCustomFont
+                            android:id="@+id/tvTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:layout_gravity="right"
+                            android:gravity="right"
+                            android:textColor="@color/skyBlueDark"
+                            />
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <com.prometteur.cpapp.utils.TextViewCustomFont
+                    android:id="@+id/tvLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_gravity="right"
+                    android:background="@color/lightGray"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_below="@+id/linTopView"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/linTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvLine"
+                    android:background="@color/lightGray"
+                    android:orientation="horizontal"
+                    android:weightSum="100"
+                    >
+
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:text="Sr No."
+                        android:singleLine="true"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:background="@color/lightGray"
+                        android:layout_weight="15"
+                        />
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_below="@+id/mvGst"
+                        />
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:text="  Service Name"
+                        android:singleLine="true"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_weight="65"
+                        android:background="@color/lightGray"
+                        />
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_below="@+id/mvGst"
+                        />
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:text="  Price(₹)"
+                        android:singleLine="true"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:layout_gravity="right"
+                        android:textColor="@color/black"
+                        android:layout_weight="25"
+                        android:background="@color/lightGray"
+                        />
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycle_ComboSelected"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_below="@+id/linTitle"
+                    />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycle_PromoOffSelected"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recycle_ComboSelected"
+                    android:layout_below="@+id/recycle_ComboSelected"
+                    />
+                <com.prometteur.cpapp.utils.TextViewCustomFont
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="-1"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="More Services"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:layout_below="@+id/recycle_PromoOffSelected"
+                    android:textStyle="bold" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:clipToPadding="false"
+                    tools:listitem="@layout/appointment_details_row"
+                    android:layout_below="@+id/tvTitle"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mvSubTotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_below="@+id/recyclerView"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+
+
+                            <com.prometteur.cpapp.utils.TextViewCustomFont
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="Sub-Total"
+                                android:singleLine="true"
+                                android:textSize="14dp"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"/>
+
+
+                        <com.prometteur.cpapp.utils.TextViewCustomFont
+                            android:id="@+id/tvSubTotal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:text=""
+                            android:singleLine="true"
+                            android:textSize="16dp"
+                            android:layout_gravity="right"
+                            android:textColor="@color/black"
+                            android:layout_weight="1"
+                            android:gravity="right"
+
+                            />
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+                <com.prometteur.cpapp.utils.TextViewCustomFont
+                    android:id="@+id/tvLine1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lightGray"
+                    android:layout_below="@+id/mvSubTotal"
+                    />
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mvGst"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_below="@+id/tvLine1"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            >
+                            <com.prometteur.cpapp.utils.TextViewCustomFont
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="Service Charges"
+                                android:singleLine="true"
+                                android:textSize="14dp"
+                                android:textColor="@color/black"/>
+
+                        </LinearLayout>
+
+                        <com.prometteur.cpapp.utils.TextViewCustomFont
+                            android:id="@+id/tvGstAmt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:text=""
+                            android:singleLine="true"
+                            android:textSize="16dp"
+                            android:textColor="@color/black"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            />
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+                <com.prometteur.cpapp.utils.TextViewCustomFont
+                    android:id="@+id/tvLine2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lightGray"
+                    android:layout_below="@+id/mvGst"
+                    />
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mvTotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_below="@+id/tvLine2"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            >
+                            <com.prometteur.cpapp.utils.TextViewCustomFont
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="Total"
+                                android:singleLine="true"
+                                android:textSize="14dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                app:textFont="poppins_semibold"/>
+
+                        </LinearLayout>
+
+                        <com.prometteur.cpapp.utils.TextViewCustomFont
+                            android:id="@+id/tvTotal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:text=""
+                            android:singleLine="true"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:layout_gravity="right"
+                            android:textColor="@color/black"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            app:textFont="poppins_semibold"
+                            />
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+                <com.prometteur.cpapp.utils.TextViewCustomFont
+                    android:id="@+id/tvLine3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lightGray"
+                    android:layout_below="@+id/mvTotal"
+                    />
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mvPayStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_below="@+id/tvLine3"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+
+
+                            <com.prometteur.cpapp.utils.TextViewCustomFont
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="Payment Status : "
+                                android:singleLine="true"
+                                android:textSize="14dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:layout_weight="1"
+                                />
+
+
+                        <com.prometteur.cpapp.utils.TextViewCustomFont
+                            android:id="@+id/tvPaymentStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:text=""
+                            android:singleLine="true"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:gravity="right"
+                            android:textColor="@color/green"
+                            android:layout_weight="1"
+
+                            />
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mvPayType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_below="@+id/mvPayStatus"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+
+
+                            <com.prometteur.cpapp.utils.TextViewCustomFont
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="Payment Type : "
+                                android:singleLine="true"
+                                android:textSize="14dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:layout_weight="1"
+                                />
+
+
+                        <com.prometteur.cpapp.utils.TextViewCustomFont
+                            android:id="@+id/tvPaymentType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:text=""
+                            android:singleLine="true"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:gravity="right"
+                            android:textColor="@color/black"
+                            android:layout_weight="1"
+                            />
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+                <com.prometteur.cpapp.utils.ButtonCustomFont
+                    android:id="@+id/btnDone"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@drawable/btn_bg"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:text="Enter End OTP"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:layout_below="@+id/mvPayType"
+                    android:visibility="gone"
+                    />
+            </RelativeLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+<include layout="@layout/activity_no_data"/>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+

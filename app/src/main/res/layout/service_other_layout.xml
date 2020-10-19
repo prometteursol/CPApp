@@ -1,0 +1,49 @@
+<LinearLayout android:id="@+id/listSurQue"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingEnd="10dp">
+        <com.prometteur.cpapp.utils.CheckBoxCustomFont
+            android:id="@+id/cbIsOtherServiceCheck"
+            style="@style/MyTexViewStyleService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/darker_gray"
+            />
+        <com.prometteur.cpapp.utils.CheckBoxCustomFont
+            android:id="@+id/cbIsOtherService"
+            style="@style/MyTexViewStyleService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/darker_gray"
+            android:button="@null"
+            android:text="Other Services"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linOtherServiceBlockContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/ivAddView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_add_black_24dp"
+        android:tint="@color/green"
+        android:layout_gravity="right"
+        android:layout_marginRight="20dp"
+
+        />
+</LinearLayout>

@@ -1,0 +1,70 @@
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/conlay1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@+id/linTopSec"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<RelativeLayout
+    android:id="@+id/rlTopSec"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+    <com.prometteur.cpapp.utils.TextViewCustomFont
+        android:id="@+id/tvComboName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:layout_marginStart="5dp"
+        android:text="@string/loading"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+         />
+
+    <com.prometteur.cpapp.utils.TextViewCustomFont
+        android:id="@+id/tvComboOfferPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:text=""
+        android:textColor="@color/skyBlueLight"
+        android:textSize="14dp"
+        android:layout_marginRight="8dp"
+      android:layout_toLeftOf="@+id/tvComboprice" />
+
+    <com.prometteur.cpapp.utils.TextViewCustomFont
+        android:id="@+id/tvComboprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:layout_marginEnd="5dp"
+        android:layout_alignParentEnd="true"/>
+
+
+
+</RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleComboServicesOffers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlTopSec"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

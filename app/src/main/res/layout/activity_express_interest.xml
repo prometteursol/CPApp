@@ -1,0 +1,1028 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/LL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:orientation="vertical"
+            android:weightSum="100"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <com.prometteur.cpapp.utils.TextViewCustomFont
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:gravity="center"
+                android:text="@string/express_interest"
+                android:textColor="@android:color/black"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTitle"
+
+                app:cardBackgroundColor="@color/lightGray"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="3dp">
+
+                <!--<RadioGroup
+                    android:id="@+id/rgCat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal">
+
+                    <com.prometteur.cpapp.utils.RadioButtonCustomFont
+                        android:id="@+id/rbSalonCat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Salon"
+
+                        />
+
+                    <com.prometteur.cpapp.utils.RadioButtonCustomFont
+                        android:id="@+id/rbInstitueCat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Institute" />
+                </RadioGroup>-->
+                <Spinner
+                    android:id="@+id/spMainCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:backgroundTint="@android:color/darker_gray"
+                    android:entries="@array/main_category_array"
+                    android:inputType="text"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/darker_gray" />
+            </androidx.cardview.widget.CardView>
+
+            <com.prometteur.cpapp.utils.CheckBoxCustomFont
+                android:id="@+id/tvSalonDetails"
+                style="@style/MyTexViewStyleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cvCategory"
+                android:backgroundTint="@android:color/darker_gray"
+                android:button="@null"
+                android:text="@string/salon_details"
+                android:textColor="@android:color/black" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSecond"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvSalonDetails"
+
+                app:cardBackgroundColor="@color/lightGray"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:id="@+id/inputSec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilSalonName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp">
+
+                        <com.prometteur.cpapp.utils.CustomeEditText
+                            android:id="@+id/edtSalonName"
+                            style="@style/MyEditTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@android:color/darker_gray"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.1234567890 "
+                            android:hint="@string/salon_name_star"
+                            android:inputType="text"
+                            android:maxLength="30"
+                            android:maxLines="1"
+                            android:paddingLeft="15dp"
+                            android:singleLine="true"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@color/darkGray" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilManName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+
+                        >
+
+                        <com.prometteur.cpapp.utils.CustomeEditText
+                            android:id="@+id/edtManName"
+                            style="@style/MyEditTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@android:color/darker_gray"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 "
+                            android:hint="@string/manager_name_star"
+                            android:inputType="text"
+                            android:maxLength="30"
+                            android:maxLines="1"
+                            android:paddingLeft="15dp"
+                            android:singleLine="true"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/darker_gray" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp">
+
+                        <com.prometteur.cpapp.utils.CustomeEditText
+                            android:id="@+id/edtAddress"
+                            style="@style/MyEditTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@android:color/darker_gray"
+                            android:hint="@string/address_star"
+                            android:inputType="textMultiLine"
+                            android:maxLength="70"
+                            android:maxLines="3"
+                            android:paddingLeft="15dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/darker_gray" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+                            android:id="@+id/spState"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="20dp"
+                            app:hintText="Select State" />
+                        <!-- <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                             android:id="@+id/spState"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginLeft="20dp"
+                             android:layout_marginTop="10dp"
+                             android:layout_marginRight="20dp"
+                             android:backgroundTint="@android:color/darker_gray"
+                             android:inputType="text"
+                             android:textAppearance="?android:attr/textAppearanceLarge"
+                             android:textColor="@android:color/black"
+                             android:textColorHint="@android:color/darker_gray"
+                             app:hintText="Select State" />-->
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+                            android:id="@+id/spCity"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="20dp"
+                            app:hintText="Select City" />
+                        <!-- <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                             android:id="@+id/spCity"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginLeft="20dp"
+                             android:layout_marginTop="10dp"
+                             android:layout_marginRight="20dp"
+                             android:backgroundTint="@android:color/darker_gray"
+                             android:inputType="text"
+                             android:textAppearance="?android:attr/textAppearanceLarge"
+                             android:textColor="@android:color/black"
+                             android:textColorHint="@android:color/darker_gray"
+                             app:hintText="Select City"
+
+                             />-->
+
+
+                    </RelativeLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilPinCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp">
+
+                        <com.prometteur.cpapp.utils.CustomeEditText
+                            android:id="@+id/edtPinCode"
+                            style="@style/MyEditTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@android:color/darker_gray"
+                            android:hint="@string/pin_code_star"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:maxLines="1"
+                            android:paddingStart="15dp"
+                            android:singleLine="true"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/darker_gray" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.prometteur.cpapp.utils.TextViewCustomFont
+                            android:id="@+id/tvEstYearLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@android:color/darker_gray"
+                            android:maxLines="1"
+                            android:paddingLeft="35dp"
+                            android:paddingTop="30dp"
+                            android:text="@string/establishment_year"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:textSize="16dp" />
+
+                        <com.prometteur.cpapp.utils.TextViewCustomFont
+                            android:id="@+id/tvEstYear"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@android:color/darker_gray"
+                            android:hint="Select Year"
+                            android:maxLines="1"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="30dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <com.prometteur.cpapp.utils.TextViewCustomFont
+                        android:id="@+id/tvSalonTiming"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/darker_gray"
+                        android:maxLines="1"
+                        android:paddingLeft="35dp"
+                        android:paddingTop="20dp"
+                        android:text="Timing"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@android:color/darker_gray"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.prometteur.cpapp.utils.TextViewCustomFont
+                            android:id="@+id/tvFromTimeLbl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="@android:color/darker_gray"
+                            android:gravity="right"
+                            android:hint="From Time"
+                            android:maxLines="1"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:textSize="16dp" />
+
+                        <com.prometteur.cpapp.utils.TextViewCustomFont
+                            android:id="@+id/toLbl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="@android:color/darker_gray"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="To"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:textSize="16dp"
+                            android:visibility="invisible" />
+
+                        <com.prometteur.cpapp.utils.TextViewCustomFont
+                            android:id="@+id/tvToTimeLbl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="@android:color/darker_gray"
+                            android:gravity="left"
+                            android:hint="To Time"
+                            android:maxLines="1"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:textSize="16dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="horizontal">
+
+                        <com.prometteur.cpapp.utils.TextViewCustomFont
+                            android:id="@+id/tvFromTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="@android:color/darker_gray"
+                            android:gravity="right"
+                            android:hint="From Time"
+                            android:maxLines="1"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:textSize="16dp" />
+
+                        <com.prometteur.cpapp.utils.TextViewCustomFont
+                            android:id="@+id/to"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="@android:color/darker_gray"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:text="To"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:textSize="16dp" />
+
+                        <com.prometteur.cpapp.utils.TextViewCustomFont
+                            android:id="@+id/tvToTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="@android:color/darker_gray"
+                            android:gravity="left"
+                            android:hint="To Time"
+                            android:maxLines="1"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:textSize="16dp" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilContactNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp">
+
+                        <com.prometteur.cpapp.utils.CustomeEditText
+                            android:id="@+id/edtContNumber"
+                            style="@style/MyEditTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@android:color/darker_gray"
+                            android:digits="0123456789"
+                            android:hint="@string/contact_number_star"
+                            android:inputType="phone"
+                            android:maxLength="10"
+                            android:maxLines="1"
+                            android:paddingStart="15dp"
+                            android:singleLine="true"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/darker_gray" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilManContNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp">
+
+                        <com.prometteur.cpapp.utils.CustomeEditText
+                            android:id="@+id/edtManContNumber"
+                            style="@style/MyEditTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@android:color/darker_gray"
+                            android:digits="0123456789"
+                            android:hint="Landline or Alternate Contact Number"
+                            android:inputType="phone"
+                            android:maxLength="11"
+                            android:paddingLeft="15dp"
+                            android:singleLine="true"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/darker_gray" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <com.prometteur.cpapp.utils.TextViewCustomFont
+                            android:id="@+id/tvGstLbl"
+                            style="@style/MyTexViewStyleService"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@android:color/darker_gray"
+                            android:maxLines="1"
+                            android:paddingStart="15dp"
+                            android:text="@string/gst"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/darker_gray" />
+
+                        <RadioGroup
+                            android:id="@+id/rgGst"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginLeft="20dp"
+                            android:orientation="horizontal">
+
+                            <com.prometteur.cpapp.utils.RadioButtonCustomFont
+                                android:id="@+id/rbYes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/yes" />
+
+                            <com.prometteur.cpapp.utils.RadioButtonCustomFont
+                                android:id="@+id/rbNo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:checked="true"
+                                android:text="@string/no" />
+
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linGstContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilGstNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp">
+
+                            <com.prometteur.cpapp.utils.CustomeEditText
+                                android:id="@+id/edtGstNo"
+                                style="@style/MyEditTextStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@android:color/darker_gray"
+                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+                                android:hint="GST Number*"
+                                android:inputType="textCapCharacters"
+                                android:maxLength="15"
+                                android:maxLines="1"
+                                android:paddingStart="15dp"
+                                android:singleLine="true"
+                                android:textAllCaps="true"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="@android:color/black"
+                                android:textColorHint="@android:color/darker_gray" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <Spinner
+                            android:id="@+id/spGstInPer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:backgroundTint="@android:color/darker_gray"
+                            android:inputType="text"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/darker_gray" />
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilInstitueCert"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp">
+
+                        <com.prometteur.cpapp.utils.CustomeEditText
+                            android:id="@+id/edtInstitueCert"
+                            style="@style/MyEditTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@android:color/darker_gray"
+                            android:hint="@string/certification"
+                            android:inputType="text"
+                            android:maxLength="30"
+                            android:maxLines="1"
+                            android:paddingLeft="15dp"
+                            android:singleLine="true"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:visibility="gone" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <com.prometteur.cpapp.utils.TextViewCustomFont
+                android:id="@+id/tvLine1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/cvSecond"
+                android:background="@color/gray"
+                android:layout_marginLeft="@dimen/dim_7dp"
+                android:layout_marginRight="@dimen/dim_7dp"/>
+
+            <com.prometteur.cpapp.utils.CheckBoxCustomFont
+                android:id="@+id/tvSocialMediaLbl"
+                style="@style/MyTexViewStyleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvLine1"
+                android:backgroundTint="@android:color/darker_gray"
+                android:button="@null"
+                android:maxLines="1"
+                android:text="Social Media"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/darker_gray" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSocMed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvSocialMediaLbl"
+                app:cardBackgroundColor="@color/lightGray"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/inputSecSoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilWebsite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp">
+
+                        <com.prometteur.cpapp.utils.CustomeEditText
+                            android:id="@+id/edtWebsite"
+                            style="@style/MyEditTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@android:color/darker_gray"
+                            android:hint="@string/webstie"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingStart="15dp"
+                            android:singleLine="true"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/darker_gray" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilEmailId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp">
+
+                        <com.prometteur.cpapp.utils.CustomeEditText
+                            android:id="@+id/edtEmailId"
+                            style="@style/MyEditTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@android:color/darker_gray"
+                            android:hint="@string/email_id"
+                            android:inputType="text"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz@._-1234567890"
+                            android:maxLines="1"
+                            android:paddingStart="15dp"
+                            android:singleLine="true"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/darker_gray" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp">
+
+                        <com.prometteur.cpapp.utils.CustomeEditText
+                            android:id="@+id/edtFacebook"
+                            style="@style/MyEditTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@android:color/darker_gray"
+                            android:hint="@string/facebook"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingStart="15dp"
+                            android:singleLine="true"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/darker_gray" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="10dp">
+
+                        <com.prometteur.cpapp.utils.CustomeEditText
+                            android:id="@+id/edtInstagram"
+                            style="@style/MyEditTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@android:color/darker_gray"
+                            android:hint="@string/instagram"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingStart="15dp"
+                            android:singleLine="true"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/darker_gray" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <com.prometteur.cpapp.utils.TextViewCustomFont
+                android:id="@+id/tvLine2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/cvSocMed"
+                android:background="@color/gray"
+                android:layout_marginLeft="@dimen/dim_7dp"
+                android:layout_marginRight="@dimen/dim_7dp"/>
+            <com.prometteur.cpapp.utils.CheckBoxCustomFont
+                android:id="@+id/tvOwnerDetails"
+                style="@style/MyTexViewStyleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvLine2"
+                android:backgroundTint="@android:color/darker_gray"
+                android:button="@null"
+                android:text="@string/owner_details"
+                android:textColor="@android:color/black" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvFourth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvOwnerDetails"
+                app:cardBackgroundColor="@color/lightGray"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/inputOwnSec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilOwnName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp">
+
+                        <com.prometteur.cpapp.utils.CustomeEditText
+                            android:id="@+id/edtOwnerName"
+                            style="@style/MyEditTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@android:color/darker_gray"
+                            android:hint="@string/owner_name_star"
+                            android:inputType="text"
+                            android:maxLength="30"
+                            android:maxLines="1"
+                            android:paddingLeft="15dp"
+                            android:singleLine="true"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/darker_gray" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilOwnContNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp">
+
+                        <com.prometteur.cpapp.utils.CustomeEditText
+                            android:id="@+id/edtOwnContNumber"
+                            style="@style/MyEditTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@android:color/darker_gray"
+                            android:hint="@string/contact_number_star"
+                            android:digits="1234567890"
+                            android:inputType="phone"
+                            android:maxLength="10"
+                            android:paddingLeft="15dp"
+                            android:singleLine="true"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/darker_gray" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="10dp">
+
+                        <com.prometteur.cpapp.utils.CustomeEditText
+                            android:id="@+id/edtOwnEdu"
+                            style="@style/MyEditTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@android:color/darker_gray"
+                            android:hint="@string/education"
+                            android:inputType="text"
+                            android:maxLength="30"
+                            android:maxLines="1"
+                            android:paddingStart="15dp"
+                            android:singleLine="true"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/darker_gray" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <com.prometteur.cpapp.utils.TextViewCustomFont
+                android:id="@+id/tvLin3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/cvFourth"
+                android:background="@color/gray"
+                android:layout_marginLeft="@dimen/dim_7dp"
+                android:layout_marginRight="@dimen/dim_7dp"/>
+            <com.prometteur.cpapp.utils.CheckBoxCustomFont
+                android:id="@+id/tvSerOffDetails"
+                style="@style/MyTexViewStyleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvLin3"
+                android:backgroundTint="@android:color/darker_gray"
+                android:button="@null"
+                android:text="@string/services_offered"
+                android:textColor="@android:color/black" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvEighth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvSerOffDetails"
+                app:cardBackgroundColor="@color/lightGray"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/service_hair_layout" />
+
+                    <include layout="@layout/service_skin_layout" />
+
+                    <include layout="@layout/service_nails_layout" />
+
+                    <include layout="@layout/service_spa_layout" />
+
+                    <include layout="@layout/service_makeup_layout" />
+
+                    <include layout="@layout/service_other_layout" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <com.prometteur.cpapp.utils.TextViewCustomFont
+                android:id="@+id/tvLin4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/cvEighth"
+                android:background="@color/gray"
+                android:layout_marginLeft="@dimen/dim_7dp"
+                android:layout_marginRight="@dimen/dim_7dp"/>
+            <com.prometteur.cpapp.utils.CheckBoxCustomFont
+                android:id="@+id/tvInfraStDetails"
+                style="@style/MyTexViewStyleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvLin4"
+                android:backgroundTint="@android:color/darker_gray"
+                android:button="@null"
+                android:text="@string/infrastructure_details"
+                android:textColor="@android:color/black" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvTenth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvInfraStDetails"
+                app:cardBackgroundColor="@color/lightGray"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/listInfraDet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+
+                    <include layout="@layout/infrastructure_det_layout" />
+
+                    <HorizontalScrollView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/imageContainer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <com.prometteur.cpapp.utils.TextViewCustomFont
+                android:id="@+id/tvLin5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/cvTenth"
+                android:background="@color/gray"
+                android:layout_marginLeft="@dimen/dim_7dp"
+                android:layout_marginRight="@dimen/dim_7dp"/>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvImgUpload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvLin5"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/lightGray"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp">
+
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cvTenth"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="40dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:translationZ="90dp">
+                <com.prometteur.cpapp.utils.TextViewCustomFont
+                    android:id="@+id/tvTermAndCondition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/by_clicking_on_submit_you_agree_to_our_terms_amp_conditions"
+                    android:textColor="@color/grey" />
+                <com.prometteur.cpapp.utils.ButtonCustomFont
+                    android:id="@+id/btnSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/btn_bg"
+                    android:onClick="btnSave"
+                    android:layout_marginTop="20dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:text="@string/submit_request"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <com.prometteur.cpapp.utils.TextViewCustomFont
+                    android:id="@+id/tvLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/arleady_have_an_account_login"
+                    android:textColor="@color/grey" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>
+
+
